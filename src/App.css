@@ -1,38 +1,109 @@
-.App {
-  text-align: center;
+.mainScreen{
+    margin: 0 auto;
+    margin-top: 9vh;
+    text-align: center;
+    padding-top: 35vh;
+    border: 1px solid black;
+    width: 140vh;
+    height: 50vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.mainScreen button{
+    margin-top: 5vh;
+    height: 40px;
+    width: 120px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.mainScreen :first-child{
+    font-size: 48px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.diffScreen{
+    margin: 0 auto;
+    margin-top: 9vh;
+    text-align: center;
+    padding-top: 15vh;
+    border: 1px solid black;
+    width: 140vh;
+    height: 70vh;
+}
+.figContainer{
+    display: flex;
+    justify-content: center;
+    text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
+.diffScreen button{
+    margin-top: 5vh;
+    height: 40px;
+    width: 120px;   
+}
+.boxContainer{
+    margin: 0 auto;
+    text-align: center;
+    border: 1px solid black;
+    width:120vh;
+    height: 77vh;
+}
+.box1, .box2, .box3, .box4, .box5, .box6, .box7, .box8, .box9{
+    margin-top: 1vh;
+    width: 20vh;
+    height: 20vh;
+    border: 1px solid black;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.battleScreen{
+    margin: 0 auto;
+    margin-top: 9vh;
+    padding-top: 5vh;
+    text-align:center;
+    border: 1px solid black;
+    width: 140vh;
+    height: 80vh;
+}
+
+.battleScreen button{
+    margin-top: 5vh;
+    height: 40px;
+    width: 120px;   
+}
+.battleScreen table{
+    margin: auto;
+    text-align: center;
+}
+/*size rules for field components*/
+.box1{
+    width: 30vh;
+    height: 40vh;
+}
+.box2{
+    width: 45vh;
+    height: 20vh;
+}
+.box3{
+    width: 20vh;
+    height: 25vh;
+}
+.box7, .box8, .box9{
+    width: 20vh;
+    height: 2vh;
+    margin-right:1vh;
+    margin-top: -2vh;
+}
+
+/*margin rules for field components*/
+.box1, .box2{
+    margin-bottom: 2vh;
+    margin-right:10vh;
+}
+.box1{
+    margin-right: 15vh;
+    padding-right: 6vh;
+}
+.box1, .box3{
+    margin-left: auto;
+}
+.box4, .box7{
+    margin-left: 20vh;
 }
