@@ -24,9 +24,9 @@ const BattleScreen = () => {
                 <td>
                     <div className = 'box3'>
                         <li>Attack</li>
-                        <li>Attack</li>
-                        <li>Attack</li>
-                        <li>Attack</li>
+                        <li>Magic</li>
+                        <li>Draw</li>
+                        <li>Item</li>
                     </div>
                 </td>
                 <td><div className = 'box4'><img src={hero1} alt="hero 1"/></div></td>
