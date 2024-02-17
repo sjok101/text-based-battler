@@ -17,7 +17,7 @@ const App = () => {
       {play ? (
         startBattle ? (
           <div className="battleScreen">
-            <BattleScreen />
+            <BattleScreen difficulty={difficulty} />
             <button
               id="forfeit-button"
               onClick={() => {

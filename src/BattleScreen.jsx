@@ -5,10 +5,48 @@ import hero3 from './assets/images/hero3.jpg'
 import boss1 from './assets/images/boss1.webp'
 import boss2 from './assets/images/boss2.webp'
 
-const BattleScreen = () => {
+const BattleScreen = (props) => {
+    const collections = [
+        {
+            version: 'Easy',
+            statData: [
+                { str: 1, vit: 1, mag: 1, spr: 1, spd: 1, luck: 1, eva: 1, hit: 1, hp: 1},
+                { str: 1, vit: 1, mag: 1, spr: 1, spd: 1, luck: 1, eva: 1, hit: 1, hp: 1},
+                { str: 1, vit: 1, mag: 1, spr: 1, spd: 1, luck: 1, eva: 1, hit: 1, hp: 1},
+                { str: 1, vit: 1, mag: 1, spr: 1, spd: 1, luck: 1, eva: 1, hit: 1, hp: 1}
+            ]
+        },
+        {
+            version: 'Hard',
+            statData: [
+                { str: 1, vit: 1, mag: 1, spr: 1, spd: 1, luck: 1, eva: 1, hit: 1, hp: 1},
+                { str: 1, vit: 1, mag: 1, spr: 1, spd: 1, luck: 1, eva: 1, hit: 1, hp: 1},
+                { str: 1, vit: 1, mag: 1, spr: 1, spd: 1, luck: 1, eva: 1, hit: 1, hp: 1},
+                { str: 1, vit: 1, mag: 1, spr: 1, spd: 1, luck: 1, eva: 1, hit: 1, hp: 1}
+            ]
+        },
+        {
+            version: 'Critical',
+            statData: [
+                { str: 1, vit: 1, mag: 1, spr: 1, spd: 1, luck: 1, eva: 1, hit: 1, hp: 1},
+                { str: 1, vit: 1, mag: 1, spr: 1, spd: 1, luck: 1, eva: 1, hit: 1, hp: 1},
+                { str: 1, vit: 1, mag: 1, spr: 1, spd: 1, luck: 1, eva: 1, hit: 1, hp: 1},
+                { str: 1, vit: 1, mag: 1, spr: 1, spd: 1, luck: 1, eva: 1, hit: 1, hp: 1}
+            ]
+        }
+    ]
+
+    const selectedVersion = collections.find(collections =>
+        collections.version === props.difficulty);
+         
+    
+
     return(
         <div>
         <div className = "boxContainer">
+            <div id="difficulty">
+                <h4>Difficulty: {props.difficulty}</h4>
+            </div>
         <table>
         <tbody>
             <tr>
