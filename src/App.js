@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import "./App.css";
 import BattleScreen from "./BattleScreen";
+import DiffScreen from "./DiffScreen";
 
 const App = () => {
   const [play, setPlay] = useState(false);
@@ -18,59 +19,21 @@ const App = () => {
           <div className="battleScreen">
             <BattleScreen />
             <button
+              id="forfeit-button"
               onClick={() => {
                 console.log(difficulty);
-                setStartBattle(false);
+                setStartBattle(false); //returns back to difficulty screen
               }}
             >
               Give up...
             </button>
           </div>
         ) : (
-          <div className="diffScreen">
-            <div className="figContainer">
-              <figure>
-                <img
-                  src={"https://placehold.co/300x400"}
-                  onClick={() => {
-                    setDifficulty("Easy");
-
-                    setStartBattle(true);
-                  }}
-                />
-                <figcaption>Easy</figcaption>
-              </figure>
-              <figure>
-                <img
-                  src={"https://placehold.co/300x400"}
-                  onClick={() => {
-                    setDifficulty("Hard");
-
-                    setStartBattle(true);
-                  }}
-                />
-                <figcaption>Hard</figcaption>
-              </figure>
-              <figure>
-                <img
-                  src={"https://placehold.co/300x400"}
-                  onClick={() => {
-                    setDifficulty("Critical");
-
-                    setStartBattle(true);
-                  }}
-                />
-                <figcaption>Critical</figcaption>
-              </figure>
-            </div>
-            <button
-              onClick={() => {
-                setPlay(false);
-              }}
-            >
-              Back to Main
-            </button>
-          </div>
+          <DiffScreen
+            setPlay={setPlay}
+            setStartBattle={setStartBattle}
+            setDifficulty={setDifficulty}
+          />
         )
       ) : (
         <div className="mainScreen">
