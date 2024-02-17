@@ -51,7 +51,25 @@
     height: 20vh;
     border: 1px solid black;
 }
+.box2{
+    background-image: url('./assets/images/boss1.webp');
+}
 
+.box4{
+    background-image: url('./assets/images/hero1.jpg');
+}
+.box5{
+    background-image: url('./assets/images/hero2.jpg');
+}
+.box6{
+    background-image: url('./assets/images/hero3.jpg');
+}
+.box4, .box5, .box6, .box2{
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+
+}
 
 .battleScreen{
     margin: 0 auto;
@@ -78,8 +96,8 @@
     height: 40vh;
 }
 .box2{
-    width: 45vh;
-    height: 20vh;
+    width: 55vh;
+    height: 35vh;
 }
 .box3{
     width: 20vh;

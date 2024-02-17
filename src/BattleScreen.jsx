@@ -10,36 +10,47 @@ const BattleScreen = (props) => {
         {
             version: 'Easy',
             statData: [
-                { str: 1, vit: 1, mag: 1, spr: 1, spd: 1, luck: 1, eva: 1, hit: 1, hp: 1},
-                { str: 1, vit: 1, mag: 1, spr: 1, spd: 1, luck: 1, eva: 1, hit: 1, hp: 1},
-                { str: 1, vit: 1, mag: 1, spr: 1, spd: 1, luck: 1, eva: 1, hit: 1, hp: 1},
-                { str: 1, vit: 1, mag: 1, spr: 1, spd: 1, luck: 1, eva: 1, hit: 1, hp: 1}
+                { name: 'squall',
+                     level: 1, str: 1, vit: 1, mag: 1, spr: 1, spd: 1, luck: 1, eva: 1, hit: 1, hp: 1},
+                { name: 'irvine',
+                     level: 1, str: 1, vit: 1, mag: 1, spr: 1, spd: 1, luck: 1, eva: 1, hit: 1, hp: 1},
+                { name: 'zell',
+                     level: 1, str: 1, vit: 1, mag: 1, spr: 1, spd: 1, luck: 1, eva: 1, hit: 1, hp: 1},
+                { name: 'bahamut',
+                     level: 1, str: 1, vit: 1, mag: 1, spr: 1, spd: 1, luck: 1, eva: 1, hit: 1, hp: 1}
             ]
         },
         {
             version: 'Hard',
             statData: [
-                { str: 1, vit: 1, mag: 1, spr: 1, spd: 1, luck: 1, eva: 1, hit: 1, hp: 1},
-                { str: 1, vit: 1, mag: 1, spr: 1, spd: 1, luck: 1, eva: 1, hit: 1, hp: 1},
-                { str: 1, vit: 1, mag: 1, spr: 1, spd: 1, luck: 1, eva: 1, hit: 1, hp: 1},
-                { str: 1, vit: 1, mag: 1, spr: 1, spd: 1, luck: 1, eva: 1, hit: 1, hp: 1}
+                { name: 'squall',
+                     level: 1, str: 1, vit: 1, mag: 1, spr: 1, spd: 1, luck: 1, eva: 1, hit: 1, hp: 1},
+                { name: 'irvine',
+                     level: 1, str: 1, vit: 1, mag: 1, spr: 1, spd: 1, luck: 1, eva: 1, hit: 1, hp: 1},
+                { name: 'zell',
+                     level: 1, str: 1, vit: 1, mag: 1, spr: 1, spd: 1, luck: 1, eva: 1, hit: 1, hp: 1},
+                { name: 'bahamut',
+                     level: 1, str: 1, vit: 1, mag: 1, spr: 1, spd: 1, luck: 1, eva: 1, hit: 1, hp: 1}
             ]
         },
         {
             version: 'Critical',
             statData: [
-                { str: 1, vit: 1, mag: 1, spr: 1, spd: 1, luck: 1, eva: 1, hit: 1, hp: 1},
-                { str: 1, vit: 1, mag: 1, spr: 1, spd: 1, luck: 1, eva: 1, hit: 1, hp: 1},
-                { str: 1, vit: 1, mag: 1, spr: 1, spd: 1, luck: 1, eva: 1, hit: 1, hp: 1},
-                { str: 1, vit: 1, mag: 1, spr: 1, spd: 1, luck: 1, eva: 1, hit: 1, hp: 1}
+                { name: 'squall',
+                     level: 1, str: 1, vit: 1, mag: 1, spr: 1, spd: 1, luck: 1, eva: 1, hit: 1, hp: 1},
+                { name: 'irvine',
+                     level: 1, str: 1, vit: 1, mag: 1, spr: 1, spd: 1, luck: 1, eva: 1, hit: 1, hp: 1},
+                { name: 'zell',
+                     level: 1, str: 1, vit: 1, mag: 1, spr: 1, spd: 1, luck: 1, eva: 1, hit: 1, hp: 1},
+                { name: 'bahamut',
+                     level: 1, str: 1, vit: 1, mag: 1, spr: 1, spd: 1, luck: 1, eva: 1, hit: 1, hp: 1}
             ]
         }
     ]
 
     const selectedVersion = collections.find(collections =>
         collections.version === props.difficulty);
-         
-    
+             
 
     return(
         <div>
@@ -52,7 +63,7 @@ const BattleScreen = (props) => {
             <tr>
                 <td><div className = 'box1'></div></td>
                 <td></td>
-                <td><div className = 'box2'><img src={boss1} alt="boss 1"/></div></td>
+                <td><div className = 'box2'></div></td>
             </tr>
             </tbody>
         </table>
@@ -67,9 +78,9 @@ const BattleScreen = (props) => {
                         <li>Item</li>
                     </div>
                 </td>
-                <td><div className = 'box4'><img src={hero1} alt="hero 1"/></div></td>
-                <td><div className = 'box5'><img src={hero2} alt="hero 2"/></div></td>
-                <td><div className = 'box6'><img src={hero3} alt="hero 3"/></div></td>
+                <td><div className = 'box4'></div></td>
+                <td><div className = 'box5'></div></td>
+                <td><div className = 'box6'></div></td>
             </tr>
             <tr>
                 <td></td>
