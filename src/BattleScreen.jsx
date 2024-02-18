@@ -1,11 +1,43 @@
-import React from 'react';
-import hero1 from './assets/images/hero1.jpg'
-import hero2 from './assets/images/hero2.jpg'
-import hero3 from './assets/images/hero3.jpg'
-import boss1 from './assets/images/boss1.webp'
-import boss2 from './assets/images/boss2.webp'
+import React, { useEffect, useState } from 'react';
+import CommandMenu from './CommandMenu'
+
 
 const BattleScreen = (props) => {
+    
+    let [count, setCount] = useState(0);
+        
+    useEffect(() => {
+        const handleKeyDown = (event) => {
+            switch(event.key){
+                case 'ArrowUp':
+                    console.log('Up');
+                    setCount(prevCount => (prevCount - 1)%4);
+                    break;
+                    case 'ArrowDown':
+                        console.log('Down');
+                        setCount(prevCount => (prevCount + 1)%4);
+                    break;
+                case 'ArrowLeft':
+                    console.log('Left');
+                    break;
+                case 'ArrowRight':
+                    console.log('Right');
+                    break;
+            }
+        };
+        document.addEventListener('keydown', handleKeyDown);
+        return () => {
+            document.removeEventListener('keydown', handleKeyDown);
+        };
+    }, []);
+    
+    useEffect(()=>{
+        if (count < 0) {
+            setCount(3);
+        }
+        console.log(count)
+    }, [count])
+
     const collections = [
         {
             version: 'Easy',
@@ -72,10 +104,8 @@ const BattleScreen = (props) => {
             <tr>
                 <td>
                     <div className = 'box3'>
-                        <li>Attack</li>
-                        <li>Magic</li>
-                        <li>Draw</li>
-                        <li>Item</li>
+                        <CommandMenu count={count}/>
+                        {count}
                     </div>
                 </td>
                 <td><div className = 'box4'></div></td>
